@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+	<html lang="pt-BR">
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>DESAFIO INDT</title>
+		
+	</head>
+<body>
+
+<!--navbar criando-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <h3><a class="nav-link" href="#"> Bem-Vindo ao Software de Desafio! Por Alessandro Leão<span class="sr-only">(current)</span></a></h3>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"> </a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#"> </a>
+      </li>
+    </ul>
+  
+  </div>
+</nav>
+<!--Fim do navbar-->	
+
+<div align="center">
+<!--Botões-->
+    <div class="col-md-4 order-md-2 mb-2">  
+
+      <button type="button" class="btn btn-primary btn-lg" value="Listar Produtos" onclick="main();" >Listar Produtos</button>  
+
+      </div> 
+<!--Fim dos botões--> 
+<!--Tabela de Produtos-->        
+  <div align="center" class="col-md-8 order-md-2 mb-4">         
+      <table class="table" id="tabela">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Código</th>
+            <th scope="col">Título do Livro</th>
+            <th scope="col">ISBN</th>
+            <th scope="col">Autor</th>
+            <!--th scope="col">Ação</th-->
+          </tr>
+        </thead>
+        <tbody>
+            <form class="form-signin">
+                       <table id="tabela"></table>
+                 </form>
+        </tbody>
+      </table>
+    </div>
+<!--fim da tabela-->   
+<!--Formulário de cadastro-->
+   <div class="container my-4">
+      <h3> Cadastro de Produto </h3>
+        <form id="formulario" method="post">
+            <input type="text" id ="title" placeholder="Nome do Livro" class="form-control my-3" >
+          
+            <input type="text" id ="isbn" placeholder="ISBN" class="form-control my-3" >
+
+            <input type="text" id ="authorId" placeholder="Identificaçao do Autor" class="form-control my-3" >
+
+            <button class="btn btn-primary btn-lg" type="submit" > Enviar </button>
+        </form>
+   </div>
+<!--Fim de cadastro de Produto-->     
+<!--Formulário de Edição-->
+   <div class="container my-4">
+      <h3> Editar </h3>
+        <form id="formularioEdicao" method="put">
+            <input type="text" id ="codProduto" placeholder="Codigo do Livro" class="form-control my-3" >
+
+            <input type="text" id ="titleEdicao" placeholder="Nome do Livro" class="form-control my-3" >
+          
+            <input type="text" id ="isbnEdicao" placeholder="ISBN" class="form-control my-3" >
+
+            <input type="text" id ="authorIdEdicao" placeholder="Identificaçao do Autor" class="form-control my-3" >
+<!--Botão de Edição-->
+          <button class="btn btn-primary btn-lg" type="submit" > Editar </button>
+   </form>
+<!--Excluir--->
+<form id="formularioExcluir" method="delete">
+            <input type="text" id ="codExcluir" placeholder="Codigo do Livro" class="form-control my-3" >
+
+<!--Botão de Exclusão-->
+            <button class="btn btn-danger btn-lg" type="submit" id="delete" > Excluir </button>
+</form>        
+   </div>
+<!--Fim de Edição-->   
+</div>
+ 		<script src="main.js" ></script>
+    <script src="app.js"  ></script>
+    <script src="put.js"  ></script>
+    <script src="delet.js"></script>
+	</body>
+</html>
